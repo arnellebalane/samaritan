@@ -1,4 +1,4 @@
 samaritan
 =========
 
-author detection system
+author identification system
