@@ -1,0 +1,26 @@
+{
+  "name": "samaritan",
+  "version": "1.0.0",
+  "homepage": "https://github.com/arnellebalane/samaritan",
+  "authors": [
+    "Arnelle Balane <arnellebalane@gmail.com>",
+    "Paulinko Kiel Labian <kiellabian@gmail.com>",
+    "Emmanuel Lodovice <name3anad@gmail.com>",
+    "Julia Camille Menchavez <jcmenchavez@gmail.com>"
+  ],
+  "description": "author identification system",
+  "main": "index.html",
+  "keywords": [
+    "author",
+    "identification",
+    "samaritan"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
