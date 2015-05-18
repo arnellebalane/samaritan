@@ -15,9 +15,161 @@ html {
 
 body {
     height: 100%;
+    background-color: #ddd;
 }
 
 
-svg {
-    display: block;
+#viewport {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ddd;
+    overflow: hidden;
+}
+
+
+.system-modal > div {
+    border: 0.2rem solid #eee;
+    margin-top: -0.2rem;
+}
+
+.system-modal > div:first-of-type {
+    margin-top: 0;
+}
+
+
+.header {
+    background-color: #999;
+    padding: 0 1rem;
+}
+
+
+.header h1 {
+    display: inline-block;
+    font: normal 1.2rem/1 "Consolas", sans-serif;
+    text-transform: uppercase;
+    padding: 0.3rem 1rem 0.1rem 0;
+}
+
+
+.header p {
+    display: inline-block;
+    vertical-align: top;
+    font: normal 1rem/1 "Consolas", sans-serif;
+    color: #444;
+    margin-top: 0.4rem;
+}
+
+
+.header span {
+    float: right;
+    width: 2rem;
+    height: 0.2rem;
+    background-color: #fff;
+    margin: 0.7rem 0 0 1rem;
+    opacity: 0.15;
+    -webkit-animation: flicker 1.5s infinite backwards;
+}
+
+.header span:nth-of-type(1) {
+    -webkit-animation-delay: 0.75s;
+}
+
+.header span:nth-of-type(3) {
+    -webkit-animation-delay: 1.25s;
+}
+
+
+.content {
+    background-color: #111;
+    padding: 0.3rem 1rem;
+}
+
+.system-modal .content {
+    border-left-width: 0.4rem;
+    border-right-width: 0.4rem;
+}
+
+
+.content p {
+    font: normal 1.6rem/1 "Consolas", sans-serif;
+    text-transform: uppercase;
+    color: #fff;
+    margin-top: 0.2rem;
+}
+
+
+.footer {
+    position: relative;
+    height: 2rem;
+    padding: 0 1rem;
+}
+
+.footer:before {
+    content: "";
+    display: inline-block;
+    width: 1.8rem;
+    height: 1.6rem;
+    border-right: 0.2rem solid #eee;
+    margin-left: -1rem;
+}
+
+
+.footer span {
+    float: right;
+    font: normal 1rem/1 "Consolas", sans-serif;
+    color: #aaa;
+    margin-top: 0.4rem;
+}
+
+
+.cursor {
+    position: relative;
+    top: -0.2em;
+    -webkit-animation: blink 300ms infinite;
+}
+
+
+
+/** SYSTEM INITIALIZING MODAL **/
+.system-initializing {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    transform: translate(-50%, -50%);
+}
+
+
+.system-initializing > div {
+    border-color: #ddd;
+}
+
+
+.system-initializing .footer {
+    background-color: #999;
+}
+
+
+
+/** ANIMATIONS **/
+@-webkit-keyframes flicker {
+    0% { opacity: 0; }
+    30% { opacity: 0.15; }
+    35% { opacity: 0; }
+    40% { opacity: 0.15; }
+    60% { opacity: 0; }
+    90% { opacity: 0.1; }
+    93% { opacity: 0; }
+    95% { opacity: 0.1; }
+    100% { opacity: 0; }
+}
+
+
+@-webkit-keyframes blink {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
 }
