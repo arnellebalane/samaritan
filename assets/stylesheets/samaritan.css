@@ -93,14 +93,6 @@ body {
 }
 
 
-.content p {
-    font: normal 1.6rem/1 "Consolas", sans-serif;
-    text-transform: uppercase;
-    color: #fff;
-    margin-top: 0.2rem;
-}
-
-
 .footer {
     position: relative;
     height: 2rem;
@@ -125,9 +117,23 @@ body {
 }
 
 
-.cursor {
+.written-message {
+    font: normal 0/1 "Consolas", sans-serif;
+    text-transform: uppercase;
+    color: #fff;
+    margin-top: 0.2rem;
+}
+
+
+.written-message .message {
+    font-size: 1.6rem;
+}
+
+
+.written-message .cursor {
     position: relative;
     top: -0.3rem;
+    font-size: 1.6rem;
     -webkit-animation: blink 300ms infinite;
 }
 
