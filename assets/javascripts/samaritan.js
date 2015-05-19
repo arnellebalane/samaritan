@@ -83,13 +83,15 @@ $('.identify-author').on('click', function() {
             messaging.send('Author Identified', function() {
                 $('.again, .quit').removeClass('hidden');
 
-                var data = {
-                    name: 'Arnelle Balane',
-                    url: 'http://static.guim.co.uk/sys-images/Guardian/About/General/2011/11/27/1322410813055/Charles-Dickens-007.jpg',
-                };
-                $('.profile h1').text(data.name);
+                var data = 'charles_dickens';
+                var name = data.split('_').map(function(item) {
+                    return item.charAt(0).toUpperCase() + item.substring(1);
+                }).join(' ');
+                var url = 'assets/images/' + data + '.jpg';
+
+                $('.profile h1').text(name);
                 $('.profile .image').css('background-image',
-                    'url("' + data.url + '")');
+                    'url("' + url + '")');
                 $('.profile').removeClass('scaled');
             });
         }, 2000);
@@ -114,7 +116,7 @@ $('.quit').on('click', function() {
     $('.profile').each(function() {
         setTimeout(function() {
             $(this).addClass('scaled');
-        }.bind(this), Math.random() * 3 * 1000);
+        }.bind(this), 1000);
     });
 
     messaging.$dom.parent().addClass('going-offline');
