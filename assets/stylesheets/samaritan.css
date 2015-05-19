@@ -24,11 +24,6 @@ body {
 }
 
 
-.invisible {
-    visibility: hidden;
-}
-
-
 #viewport {
     display: flex;
     align-items: center;
@@ -40,6 +35,11 @@ body {
     bottom: 0;
     background-color: #ddd;
     overflow: hidden;
+    transition: background-color 500ms ease;
+}
+
+#viewport.offline {
+    background-color: #111;
 }
 
 
@@ -56,6 +56,12 @@ body {
 .header {
     background-color: #999;
     padding: 0 1rem;
+    transform-origin: 0 0;
+    transition: transform 350ms ease;
+}
+
+.offline .header {
+    transform: scale(0);
 }
 
 
@@ -98,11 +104,18 @@ body {
 .content {
     background-color: #111;
     padding: 0.3rem 1rem;
+    transition: background-color 350ms ease;
 }
 
 .system-modal .content {
     border-left-width: 0.4rem;
     border-right-width: 0.4rem;
+}
+
+.offline .content {
+    background-color: #e90005;
+    padding: 1.7rem 5rem 1.5rem 5rem;
+    border: none;
 }
 
 
@@ -125,6 +138,8 @@ body {
     position: relative;
     height: 2rem;
     padding: 0 1rem;
+    transform-origin: 100% 100%;
+    transition: transform 350ms ease;
 }
 
 .footer:before {
@@ -134,6 +149,10 @@ body {
     height: 1.6rem;
     border-right: 0.2rem solid #eee;
     margin-left: -1rem;
+}
+
+.offline .footer {
+    transform: scale(0);
 }
 
 
@@ -169,13 +188,24 @@ body {
 
 .written-message .message {
     font-size: 1.6rem;
+    transition: font-size 350ms ease;
 }
+
+.offline .message {
+    font-size: 3.6rem;
+}
+
 
 .written-message.important .message {
     color: #fff;
     background-color: #e90005;
     margin-top: 0;
     padding: 0.2rem 0.5rem 0 0.5rem;
+}
+
+.written-message.going-offline .message {
+    display: block;
+    text-align: center;
 }
 
 
@@ -190,7 +220,12 @@ body {
 
 /** SYSTEM INITIALIZING MODAL **/
 .system-initializing {
-    width: 400px;
+    width: 40rem;
+}
+
+.offline .system-initializing {
+    width: auto;
+    -webkit-filter: blur(1px);
 }
 
 
@@ -208,6 +243,11 @@ body {
 /** TARGET PROFILE **/
 .profile {
     position: absolute;
+    transition: transform 250ms ease;
+}
+
+.profile.scaled {
+    transform: scale(0);
 }
 
 
@@ -246,9 +286,10 @@ body {
 
 .profile p {
     display: block;
-    font: normal 1.2rem/1 "Consolas", monospace;
+    font: normal 1rem/1 "Consolas", monospace;
+    text-align: right;
     text-transform: uppercase;
-    color: #fff;
+    color: #bbb;
     background-color: #222;
     border: 0.2rem solid #999;
     border-left-width: 0.5rem;
