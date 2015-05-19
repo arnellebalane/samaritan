@@ -60,9 +60,7 @@ $('button').on('click', function() {
     messaging.focus();
     messaging.send('Identifying Author', function() {
         setTimeout(function() {
-            messaging.important('Author Identified', function() {
-                messaging.blur();
-            });
+            messaging.send('Author Identified');
         }, 2000);
     });
 });
@@ -79,4 +77,15 @@ messaging.send('Initializing System', function() {
             }, 0);
         });
     }, 3000);
+});
+
+
+
+// POSITIONING THE TARGET PROFILE
+var modal = $('.system-modal');
+var profile = $('.profile');
+
+profile.css({
+    top: modal.offset().top + modal.outerHeight() + 30 + 'px',
+    left: modal.offset().left - profile.outerWidth() / 2 + 'px'
 });

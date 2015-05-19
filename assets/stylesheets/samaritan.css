@@ -61,7 +61,7 @@ body {
 
 .header h1 {
     display: inline-block;
-    font: normal 1.2rem/1 "Consolas", sans-serif;
+    font: normal 1.2rem/1 "Consolas", monospace;
     text-transform: uppercase;
     padding: 0.3rem 1rem 0.1rem 0;
 }
@@ -70,7 +70,7 @@ body {
 .header p {
     display: inline-block;
     vertical-align: top;
-    font: normal 1rem/1 "Consolas", sans-serif;
+    font: normal 1rem/1 "Consolas", monospace;
     color: #444;
     margin-top: 0.4rem;
 }
@@ -110,7 +110,7 @@ body {
     display: block;
     width: 100%;
     height: 1.6rem;
-    font: normal 1.6rem/1 "Consolas", sans-serif;
+    font: normal 1.6rem/1 "Consolas", monospace;
     color: #fff;
     background-color: transparent;
     margin: 1rem 0;
@@ -140,7 +140,7 @@ body {
 .footer button {
     display: inline-block;
     vertical-align: top;
-    font: normal 1.1rem/1 "Consolas", sans-serif;
+    font: normal 1.1rem/1 "Consolas", monospace;
     text-transform: uppercase;
     color: #222;
     border: 0.1rem solid #222;
@@ -153,14 +153,14 @@ body {
 
 .footer span {
     float: right;
-    font: normal 1rem/1 "Consolas", sans-serif;
+    font: normal 1rem/1 "Consolas", monospace;
     color: #aaa;
     margin-top: 0.4rem;
 }
 
 
 .written-message {
-    font: normal 0/1 "Consolas", sans-serif;
+    font: normal 0/1 "Consolas", monospace;
     text-transform: uppercase;
     color: #fff;
     margin-top: 0.2rem;
@@ -201,6 +201,59 @@ body {
 
 .system-initializing .footer {
     background-color: #999;
+}
+
+
+
+/** TARGET PROFILE **/
+.profile {
+    position: absolute;
+}
+
+
+.profile h1 {
+    display: inline-block;
+    font: normal 1.6rem/1 "Consolas", monospace;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #e90005;
+    margin-top: 0;
+    padding: 0.3rem 1rem 0 1rem;
+}
+
+
+.profile .image {
+    position: relative;
+    width: 25rem;
+    height: 15rem;
+    border: 0.4rem solid #555;
+    border-right-width: 1.2rem;
+    border-bottom-width: 0.8rem;
+    background: #666 center center no-repeat;
+    background-size: cover;
+}
+
+.profile .image:before {
+    content: "";
+    position: absolute;
+    top: 1.5rem;
+    right: -1.1rem;
+    bottom: 1.5rem;
+    width: 1rem;
+    border: 2px solid #777;
+}
+
+
+.profile p {
+    display: block;
+    font: normal 1.2rem/1 "Consolas", monospace;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #222;
+    border: 0.2rem solid #999;
+    border-left-width: 0.5rem;
+    border-right-width: 6rem;
+    padding: 0.3rem 0.3rem 0.1rem 0.3rem;
 }
 
 
