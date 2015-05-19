@@ -51,6 +51,21 @@ var messaging = {
 };
 
 
+setTimeout(function() {
+    messaging.send('Initializing System', function() {
+        setTimeout(function() {
+            messaging.important('Enter Input Text', function() {
+                messaging.blur();
+                $('textarea, .identify-author').removeClass('hidden');
+                setTimeout(function() {
+                    $('textarea').focus();
+                }, 0);
+            });
+        }, 1000);
+    });
+}, 1000);
+
+
 
 $('textarea').on('keydown keyup', function() {
     $(this).height(0);
@@ -115,20 +130,6 @@ $('.quit').on('click', function() {
             messaging.set('Samaritan: Offline');
         }
     }, 1000);
-});
-
-
-
-messaging.send('Initializing System', function() {
-    setTimeout(function() {
-        messaging.important('Enter Input Text', function() {
-            messaging.blur();
-            $('textarea, .identify-author').removeClass('hidden');
-            setTimeout(function() {
-                $('textarea').focus();
-            }, 0);
-        });
-    }, 3000);
 });
 
 

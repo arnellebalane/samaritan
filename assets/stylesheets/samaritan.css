@@ -35,11 +35,12 @@ body {
     bottom: 0;
     background-color: #ddd;
     overflow: hidden;
+    opacity: 1;
     transition: background-color 500ms ease;
 }
 
 #viewport.offline {
-    background-color: #111;
+    background-color: #000;
 }
 
 
