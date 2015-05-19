@@ -84,7 +84,7 @@ $('.identify-author').on('click', function() {
     messaging.focus();
     messaging.send('Identifying Author', function() {
         $.ajax({
-            url: 'http://localhost:8000/classify/',
+            url: 'http://localhost:8000/classifiy/',
             type: 'GET',
             data: { q: input },
             success: function(data) {
