@@ -50,7 +50,6 @@ var messaging = {
     }
 };
 
-
 setTimeout(function() {
     messaging.send('Initializing System', function() {
         setTimeout(function() {
@@ -63,9 +62,14 @@ setTimeout(function() {
             });
         }, 1000);
     });
+}, 1250);
+
+
+
+setTimeout(function() {
+    $('#viewport').removeClass('offline');
+    $('.cursor').removeClass('hidden');
 }, 1000);
-
-
 
 $('textarea').on('keydown keyup', function() {
     $(this).height(0);
