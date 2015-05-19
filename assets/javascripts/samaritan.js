@@ -83,22 +83,28 @@ $('.identify-author').on('click', function() {
 
     messaging.focus();
     messaging.send('Identifying Author', function() {
-        setTimeout(function() {
-            messaging.send('Author Identified', function() {
-                $('.again, .quit').removeClass('hidden');
+        $.ajax({
+            url: 'http://localhost:8000/classify/',
+            type: 'GET',
+            data: { q: input },
+            success: function(data) {
+                setTimeout(function() {
+                    messaging.send('Author Identified', function() {
+                        $('.again, .quit').removeClass('hidden');
 
-                var data = 'charles_dickens';
-                var name = data.split('_').map(function(item) {
-                    return item.charAt(0).toUpperCase() + item.substring(1);
-                }).join(' ');
-                var url = 'assets/images/' + data + '.jpg';
+                        var name = data.split('_').map(function(item) {
+                            return item.charAt(0).toUpperCase() + item.substring(1);
+                        }).join(' ');
+                        var url = 'assets/images/' + data + '.jpg';
 
-                $('.profile h1').text(name);
-                $('.profile .image').css('background-image',
-                    'url("' + url + '")');
-                $('.profile').removeClass('scaled');
-            });
-        }, 2000);
+                        $('.profile h1').text(name);
+                        $('.profile .image').css('background-image',
+                            'url("' + url + '")');
+                        $('.profile').removeClass('scaled');
+                    });
+                }, 2000);
+            }
+        });
     });
 });
 
