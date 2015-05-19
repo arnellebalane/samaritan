@@ -19,7 +19,20 @@ body {
 }
 
 
+.hidden {
+    display: none !important;
+}
+
+
+.invisible {
+    visibility: hidden;
+}
+
+
 #viewport {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: absolute;
     top: 0;
     left: 0;
@@ -93,6 +106,21 @@ body {
 }
 
 
+.content textarea {
+    display: block;
+    width: 100%;
+    height: 1.6rem;
+    font: normal 1.6rem/1 "Consolas", sans-serif;
+    color: #fff;
+    background-color: transparent;
+    margin: 1rem 0;
+    padding: 0 0.5rem;
+    border: none;
+    outline: none;
+    resize: none;
+}
+
+
 .footer {
     position: relative;
     height: 2rem;
@@ -106,6 +134,20 @@ body {
     height: 1.6rem;
     border-right: 0.2rem solid #eee;
     margin-left: -1rem;
+}
+
+
+.footer button {
+    display: inline-block;
+    vertical-align: top;
+    font: normal 1.1rem/1 "Consolas", sans-serif;
+    text-transform: uppercase;
+    color: #222;
+    border: 0.1rem solid #222;
+    padding: 0.3rem 0.6rem 0 0.6rem;
+    margin-left: -0.3rem;
+    cursor: pointer;
+    outline: none;
 }
 
 
@@ -129,6 +171,13 @@ body {
     font-size: 1.6rem;
 }
 
+.written-message.important .message {
+    color: #fff;
+    background-color: #e90005;
+    margin-top: 0;
+    padding: 0.2rem 0.5rem 0 0.5rem;
+}
+
 
 .written-message .cursor {
     position: relative;
@@ -141,11 +190,7 @@ body {
 
 /** SYSTEM INITIALIZING MODAL **/
 .system-initializing {
-    position: absolute;
-    top: 50%;
-    left: 50%;
     width: 400px;
-    transform: translate(-50%, -50%);
 }
 
 
