@@ -93,7 +93,8 @@ $('.identify-author').on('click', function() {
                         $('.again, .quit').removeClass('hidden');
 
                         var name = data.split('_').map(function(item) {
-                            return item.charAt(0).toUpperCase() + item.substring(1);
+                            return item.charAt(0).toUpperCase()
+                                + item.substring(1);
                         }).join(' ');
                         var url = 'assets/images/' + data + '.jpg';
 

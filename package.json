@@ -25,5 +25,11 @@
   "bugs": {
     "url": "https://github.com/arnellebalane/samaritan/issues"
   },
-  "homepage": "https://github.com/arnellebalane/samaritan"
+  "homepage": "https://github.com/arnellebalane/samaritan",
+  "window": {
+    "title": "Samaritan",
+    "resizable": false,
+    "fullscreen": true,
+    "toolbar": false
+  }
 }
