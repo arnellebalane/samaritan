@@ -78,7 +78,7 @@ $('textarea').on('keydown keyup', function() {
 
 $('.identify-author').on('click', function() {
     var input = $('textarea').val().trim().replace(/\r?\n/g, ' ');
-    $('textarea').val('');
+    $('textarea').val('').height(16);
     $('textarea, .identify-author').addClass('hidden');
 
     messaging.focus();
@@ -141,6 +141,7 @@ $('.quit').on('click', function() {
             clearInterval(t);
             $('#viewport').addClass('offline');
             messaging.set('Samaritan: Offline');
+            setTimeout(window.close, 1000);
         }
     }, 1000);
 });
