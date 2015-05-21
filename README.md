@@ -1,4 +1,4 @@
 samaritan
 =========
 
-author identification system
+user interface for the samaritan author identification system
