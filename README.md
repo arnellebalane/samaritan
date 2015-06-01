@@ -1,5 +1,5 @@
-samaritan
-=========
+samaritan-ui
+============
 
 user interface for the samaritan author identification system
 
